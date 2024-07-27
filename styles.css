@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Kumbh Sans", sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Paleorange: hsl(25, 100%, 94%);
+    --Verydarkblue: hsl(220, 13%, 13%);
+    --Darkgrayishblue: hsl(219, 9%, 45%);
+    --Grayishblue: hsl(220, 14%, 75%);
+    --Lightgrayishblue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+}
+
+.container {
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.nav-left ul {
+    list-style: none;
+}
+
+.cart-hidden {
+    display: none;
+}
+
+.nav-links img {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Darkgrayishblue)
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--Darkgrayishblue);
+}
+
+.nav-links a:hover {
+    color: var(--Black);
+}
+
+.nav-links a:hover:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--Orange);
+    left: 0;
+    top: 25px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.avatar img {
+    width: 45px;
+    height: 45px;
+
+}
+
+
+/* -------Responsive--------- */
+@media screen and (max-width:576px) {
+    .container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .navbar {
+        display: flex;
+        border-bottom: none;
+    }
+
+    .menu-btn {
+        display: inline-block;
+    }
+
+    .nav-links img {
+        display: inline-block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width:100%;
+        max-width: 220px;
+        background: white;
+        padding: 1rem;
+    }
+
+    .nav-links a {
+        color: var(--Black);
+        font-weight: 700;
+        text-align: start;
+
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .avatar img {
+        width: 30px;
+        height: 30px;
+    }
+}
